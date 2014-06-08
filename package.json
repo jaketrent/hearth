@@ -3,8 +3,12 @@
   "version": "1.0.0",
   "description": "this is the night we've waited for",
   "main": "index.js",
+  "config": {
+    "routes": "server/config/routes.js"
+  },
   "scripts": {
-    "start": "node_modules/.bin/node-dev --harmony server/server"
+    "routes": "routes",
+    "start": "DEBUG=ht:* node_modules/.bin/node-dev --harmony server/server"
   },
   "engines": {
     "node": "~0.11.11",
@@ -26,7 +30,11 @@
     "lodash": "~2.4.1",
     "dotenv": "~0.2.8",
     "aws-sdk": "~2.0.0-rc.19",
-    "debug": "~1.0.1"
+    "debug": "~1.0.1",
+    "node-uuid": "~1.4.1",
+    "express-validator": "~2.3.0",
+    "body-parser": "~1.3.0",
+    "express-ls-routes": "~0.1.1"
   },
   "devDependencies": {
     "klei-migrate": "~0.6.2",
